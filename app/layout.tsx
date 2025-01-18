@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import Provider from "./Provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import {Kodchasan} from 'next/font/google'
+import { Suspense } from "react";
+import LoadingCard from "@/components/card/LoadingCard";
 
 const  kodchasan = Kodchasan({
   weight:'400',
@@ -22,6 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <Suspense fallback={<LoadingCard />}>
     <ClerkProvider>
 
       <html lang="en" suppressHydrationWarning>
@@ -40,5 +43,6 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
+    </Suspense>
   );
 }

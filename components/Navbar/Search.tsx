@@ -1,8 +1,9 @@
 'use client'
 import { useRouter, useSearchParams } from "next/navigation"
 import { Input } from "../ui/input"
-import {  useEffect, useState } from 'react'
+import {  Suspense, useEffect, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
+import LoadingCard from "../card/LoadingCard"
 
 const Search = () => {
   const searchParams = useSearchParams()
@@ -28,6 +29,7 @@ const Search = () => {
   },[queryParam])
 
   return (
+    <Suspense fallback={<LoadingCard />}>
     <Input 
     type="text"
     placeholder="Search Landmark..."
@@ -38,6 +40,7 @@ const Search = () => {
     }}
     value={search}
     />
+    </Suspense>
   )
 }
 export default Search

@@ -1,13 +1,13 @@
 
+import { createLandmarkAction } from "@/actions/actions"
 import { SubmitButton } from "@/components/form/Buttons"
+import CategoryInput from "@/components/form/CategoryInput"
 import FormContainer from "@/components/form/FormContainer"
 import FormInput from "@/components/form/FormInput"
-import { createLandmarkAction } from "@/actions/actions"
-
-import CategoryInput from "@/components/form/CategoryInput"
+import ImageInput from "@/components/form/ImageInput"
 import TextAraeInput from "@/components/form/TextAreaInput"
 import MapLandmark from "@/components/map/MapLandmark"
-import ImageInput from "@/components/form/ImageInput"
+
 
 const CreateLandmark = async () => {
 
