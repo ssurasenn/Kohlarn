@@ -1,0 +1,8 @@
+{
+    "build": {
+      "env": {
+        "DATABASE_URL": "postgresql://postgres.llosehqfxgfieyccxmlt:Aew32Zh8gj8qQRQq@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
+      }
+    }
+  }
+  
